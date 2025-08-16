@@ -56,13 +56,15 @@ const Navbar = () => {
             <ul className="flex flex-col space-y-4">
               {navLinks.map(link => (
                 <li key={link.path}>
-                  <Link
+                  <NavLink
                     to={link.path}
-                    className="nav-link block text-primary hover:text-red-950 font-satoshi font-bold"
+                    className={({ isActive }) =>
+                      `nav-link block text-white font-satoshi font-bold rounded-lg px-4 py-2 transition-colors duration-200 hover:bg-primary ${isActive ? 'bg-primary' : ''}`
+                    }
                     onClick={() => setMenuOpen(false)}
                   >
                     {link.name}
-                  </Link>
+                  </NavLink>
                 </li>
               ))}
             </ul>
