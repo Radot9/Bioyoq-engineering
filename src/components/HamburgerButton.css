@@ -1,0 +1,68 @@
+/* Force mobile menu links to be pure white and fully opaque */
+@media (max-width: 768px) {
+  /* .nav-link {
+    color: #fff !important;
+    opacity: 1 !important;
+  } */
+}
+.menu--1 label {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  width: 100px;
+  height: 100px;
+  background-color: transparent;
+}
+
+.menu--1 svg {
+  width: 100%;
+  height: 100%;
+}
+
+
+/* Blurred backdrop for hamburger circle */
+.hamburger-blur-bg {
+  fill: rgba(255,255,255,0.15);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: opacity 0.3s ease;
+}
+
+label:hover .hamburger-blur-bg {
+  opacity: 1;
+}
+
+path {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  --length: 24;
+  --offset: -38;
+  stroke-dasharray: var(--length) var(--total-length);
+  stroke-dashoffset: var(--offset);
+  transition: all 0.8s cubic-bezier(.645, .045, .355, 1);
+}
+
+/* Default dash lengths for menu--1 */
+.menu--1 .line--1,
+.menu--1 .line--3 {
+  --total-length: 126.64183044433594;
+}
+
+.menu--1 .line--2 {
+  --total-length: 70;
+}
+
+/* Checked state animation */
+.menu--1.cross input:checked + svg .line--1,
+.menu--1.cross input:checked + svg .line--3 {
+  --length: 22.627416998;
+  --offset: -94.1149185097;
+}
+
+.menu--1.cross input:checked + svg .line--2 {
+  --length: 0;
+  --offset: -50;
+}

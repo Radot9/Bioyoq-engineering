@@ -1,0 +1,111 @@
+circle {
+  fill: transparent !important;
+  transition: opacity 0.3s ease;
+}
+.badge-container {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #FCE3B8;
+  border-radius: 50%;
+  box-shadow:
+    0 2px 4px 0 rgba(60, 60, 60, 0.18),
+    0 6px 20px 0 rgba(60, 60, 60, 0.15),
+    0 1.5px 6px 0 rgba(60, 60, 60, 0.10);
+  overflow: hidden;
+  z-index: 9999;
+}
+.badge-icon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 70px;
+  height: 70px;
+  background: #FCE3B8;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+.badge-icon img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+.badge-text {
+  width: 160px;
+  height: 160px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  pointer-events: none;
+  animation: spin 8s linear infinite;
+  transform-origin: 50% 50%;
+}
+.badge-text circle {
+  opacity: 1 !important;
+}
+.badge-shine {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 120px;
+  height: 120px;
+  pointer-events: none;
+  z-index: 3;
+  background: linear-gradient(120deg, rgba(255,255,255,0.0) 40%, rgba(255,255,255,0.7) 50%, rgba(255,255,255,0.0) 60%);
+  opacity: 0;
+  transform: translateX(-60px) skewX(-20deg);
+  animation: badge-shine 1.1s linear forwards;
+}
+@keyframes badge-shine {
+  0% {
+    opacity: 0;
+    transform: translateX(-60px) skewX(-20deg);
+  }
+  10% {
+    opacity: 0.7;
+  }
+  60% {
+    opacity: 0.7;
+    transform: translateX(60px) skewX(-20deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(120px) skewX(-20deg);
+  }
+}
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 640px) {
+  .badge-container {
+    width: 110px;
+    height: 110px;
+  }
+  .badge-icon {
+    width: 48px;
+    height: 48px;
+  }
+  .badge-icon img {
+    width: 34px;
+    height: 34px;
+  }
+  .badge-text {
+    width: 110px;
+    height: 110px;
+  }
+  .badge-shine {
+    width: 80px;
+    height: 80px;
+  }
+}
