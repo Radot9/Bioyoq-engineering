@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import logo from '../assets/images/bioyoq-logo-white.svg';
 import HamburgerButton from './HamburgerButton';
@@ -12,9 +12,18 @@ const navLinks = [
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 10);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
-    <header className="w-full absolute top-0 left-0 z-50 my-4">
+    <header className={`w-full fixed top-0 left-0 z-50 transition-colors duration-300 ${scrolled ? 'bg-red-950' : 'bg-transparent'} my-0`}>
       <div className="flex items-center justify-between px-4 py-4 md:px-8 max-w-screen-2xl mx-auto">
         <img src={logo} alt="Bioyoq Logo" className="h-14 md:h-16" />
         {/* Desktop nav */}
