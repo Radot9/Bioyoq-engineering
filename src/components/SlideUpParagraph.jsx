@@ -10,7 +10,7 @@ export const SlideUpParagraph = ({ children }) => {
       initial={{ opacity: 0, y: 40 }}
       animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-  className="text-base md:text-md text-gray-700"
+      className="text-lg text-gray-700"
     >
       {children}
     </motion.p>

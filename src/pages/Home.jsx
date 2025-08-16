@@ -4,8 +4,9 @@ import PrimaryButton from "../components/PrimaryButton.jsx";
 import { SlideUpParagraph } from "../components/SlideUpParagraph.jsx";
 import { AnimatedAboutText } from "../components/AnimatedAboutText.jsx";
 import { AnimatedDivider } from "../components/AnimatedDivider.jsx";
-import { MarqueeScrollText } from "../components/MarqueeScrollText.jsx"; 
+import { MarqueeScrollText } from "../components/MarqueeScrollText.jsx";
 import { processSteps } from "../data/processSteps";
+import { capabilities } from "../data/capabilities.js";
 import { motion } from "framer-motion";
 
 export default function Home() {
@@ -19,12 +20,18 @@ export default function Home() {
             alt="Hero"
             className="rounded-b-3xl w-full h-full object-cover"
           />
-          <div className="absolute inset-0 rounded-b-3xl pointer-events-none" style={{background: 'linear-gradient(to bottom, rgba(0, 0, 0, 0.71) 0%, rgba(30,30,30,0.0) 40%)'}} />
-              <div className="absolute bottom-10 left-1/2 -translate-x-1/2 w-full max-w-screen-2xl mx-auto flex px-4 md:px-8 translate-y-[50%]">
-                <div className="flex-1 flex justify-end">
-                  <Badge />
-                </div>
-              </div>
+          <div
+            className="absolute inset-0 rounded-b-3xl pointer-events-none"
+            style={{
+              background:
+                "linear-gradient(to bottom, rgba(0, 0, 0, 0.71) 0%, rgba(30,30,30,0.0) 40%)",
+            }}
+          />
+          <div className="absolute bottom-10 left-1/2 -translate-x-1/2 w-full max-w-screen-2xl mx-auto flex px-4 md:px-8 translate-y-[50%]">
+            <div className="flex-1 flex justify-end">
+              <Badge />
+            </div>
+          </div>
         </div>
         <div className="mt-2 lg:mt-8 px-4 py-3 md:px-8 max-w-screen-2xl mx-auto">
           <h1 className="w-[70vw] font-black mb-4 uppercase text-primary text-[clamp(2rem,6vw,3.5rem)] 2xl:text-[clamp(2.5rem,8vw,5rem)] leading-[1.1] tracking-tight">
@@ -55,7 +62,7 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section className="flex flex-col gap-8 mx-auto max-w-screen-2xl px-8 py-32">
+      <section className="flex flex-col gap-2 lg:gap-8 mx-auto max-w-screen-2xl px-8 py-8 lg:py-32">
         {/* First text - left side */}
         <div className="text-left w-full md:w-3/5">
           <SlideUpParagraph>
@@ -75,14 +82,14 @@ export default function Home() {
         </div>
       </section>
 
-       {/* Marquee Section: gentle horizontal scroll */}
+      {/* Marquee Section: gentle horizontal scroll */}
       <section className="w-full py-8 flex flex-col items-center justify-center">
         <MarqueeScrollText text="From blueprint to reality." />
         <AnimatedDivider />
       </section>
 
-       {/* Our Expertise Section */}
-      <section className="mx-auto max-w-screen-2xl px-4 py-16">
+      {/* Our Expertise Section */}
+      <section className="mx-auto max-w-screen-2xl px-8 py-8 lg:py-16">
         <h2 className="text-4xl font-bold mb-8 text-gray-900">Our Expertise</h2>
         <div className="w-full md:w-7/10 text-left">
           <SlideUpParagraph>
@@ -92,7 +99,7 @@ export default function Home() {
       </section>
 
       {/* Process Section */}
-      <section className="mx-auto max-w-screen-2xl py-16">
+      <section className="mx-auto max-w-screen-2xl px-4 py-8 lg:py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 divide-x divide-amber-950/20">
           {processSteps.map((step, idx) => (
             <motion.div
@@ -103,8 +110,15 @@ export default function Home() {
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.7, delay: step.delay }}
             >
-              <div className="text-5xl font-extrabold mb-2" style={{ color: '#9D2B21' }}>{step.number}</div>
-              <div className="text-2xl font-bold text-gray-900 mb-2">{step.title}</div>
+              <div
+                className="text-5xl font-extrabold mb-2"
+                style={{ color: "#9D2B21" }}
+              >
+                {step.number}
+              </div>
+              <div className="text-2xl font-bold text-gray-900 mb-2">
+                {step.title}
+              </div>
               <div className="border-b border-amber-950 opacity-20 w-full mb-4"></div>
               <div className="text-gray-700 mb-4">{step.description}</div>
               <ul className="list-disc pl-5 space-y-2 text-gray-600">
@@ -115,6 +129,50 @@ export default function Home() {
             </motion.div>
           ))}
         </div>
+      </section>
+
+      {/* Our Capabilities */}
+      <section className="mx-auto max-w-screen-2xl px-8 py-8 lg:py-16">
+        <h2 className="text-4xl font-bold mb-8 text-gray-900">Our Capabilities</h2>
+          <SlideUpParagraph>
+            <div className="max-w-[700px]">
+              We leverage cutting-edge technology and industry best practices to deliver exceptional results in every project. Our capabilities include advanced project management, sustainable construction practices, and a commitment to safety and quality.
+            </div>
+          </SlideUpParagraph>
+         <div className="mt-8">
+          <ul className="divide-y divide-amber-950/20">
+            {capabilities.map(({ title, href, desc }) => (
+              <li key={title} className="py-12 flex-col md:flex-row items-center justify-between gap-16 group relative">
+                <a
+                  href={href}
+                  className="text-4xl uppercase font-semibold text-primary hover:underline flex-1 block"
+                >
+                  {title}
+                </a>
+                <div className="flex-1 text-gray-600 text-base lg:px-4 my-4">{desc}</div>
+                <span className="ml-2 flex-shrink-0 relative flex items-center">
+                  <span className="absolute uppercase right-8 opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-primary text-sm font-semibold pointer-events-none">
+                    Learn more
+                  </span>
+                  <svg
+                    width="44"
+                    height="44"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="text-primary transform rotate-[-45deg] group-hover:rotate-0 transition-transform duration-200"
+                  >
+                    <line x1="5" y1="12" x2="19" y2="12" />
+                    <polyline points="12 5 19 12 12 19" />
+                  </svg>
+                </span>
+              </li>
+            ))}
+          </ul>
+          </div>
       </section>
     </>
   );

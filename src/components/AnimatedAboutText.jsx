@@ -6,7 +6,7 @@ export const AnimatedAboutText = ({ text }) => {
   const words = text.split(" ");
 
   return (
-    <span className="text-3xl lg:text-5xl font-base text-gray-900 mb-16 flex flex-wrap gap-2">
+    <span className="text-3xl lg:text-5xl font-base text-gray-900 mb-8 lg:mb-16 flex flex-wrap gap-2">
       {words.map((word, i) => (
         <span key={i}>{word}</span>
       ))}
