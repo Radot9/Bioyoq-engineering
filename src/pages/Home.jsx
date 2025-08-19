@@ -142,25 +142,25 @@ export default function Home() {
          <div className="mt-8">
           <ul className="divide-y divide-amber-950/20">
             {capabilities.map(({ title, href, desc }) => (
-              <li key={title} className="py-12 flex-col md:flex-row items-center justify-between gap-16 group relative">
+              <li key={title} className="py-12 flex flex-col md:flex-row md:items-center justify-between gap-8 md:gap-16 group relative">
                 <a
                   href={href}
-                  className="text-4xl uppercase font-semibold text-primary hover:underline flex-1 block"
+                  className="text-4xl uppercase font-base text-primary hover:underline flex-1 block"
                 >
                   {title}
                 </a>
                 <div className="flex-1 text-gray-600 text-base lg:px-4 my-4">{desc}</div>
                 <span className="ml-2 flex-shrink-0 relative flex items-center">
-                  <span className="absolute uppercase right-8 opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-primary text-sm font-semibold pointer-events-none">
+                  <span className="absolute uppercase px-8 right-8 opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-primary text-sm font-base pointer-events-none">
                     Learn more
                   </span>
                   <svg
-                    width="44"
-                    height="44"
+                    width="60"
+                    height="60"
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
-                    strokeWidth="2"
+                    strokeWidth="1"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     className="text-primary transform rotate-[-45deg] group-hover:rotate-0 transition-transform duration-200"
