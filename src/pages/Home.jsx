@@ -180,7 +180,7 @@ export default function Home() {
 
       {/* Our Members */}
       <section className="mx-auto max-w-screen-2xl px-8 py-8 lg:py-16">
-        <div className="flex w-full mb-16">
+        <div className="flex flex-col md:flex-row w-full mb-16">
           <h2 className="text-4xl font-bold mb-8 text-gray-900 flex-1">Our Members</h2>
           <SlideUpParagraph>
             <div className="md:w-2/5 ml-auto">
