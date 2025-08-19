@@ -92,7 +92,7 @@ export default function Home() {
       </section>
 
       {/* Our Expertise Section */}
-      <section className="mx-auto max-w-screen-2xl px-8 py-8 lg:py-16">
+      <section className="mx-auto max-w-screen-2xl px-4 md:px-8 py-8 lg:py-16">
         <h2 className="text-4xl font-bold mb-8 text-gray-900">Our Expertise</h2>
         <div className="w-full md:w-7/10 text-left">
           <SlideUpParagraph>
@@ -103,11 +103,11 @@ export default function Home() {
 
       {/* Process Section */}
       <section className="mx-auto max-w-screen-2xl px-4 md:px-8 py-8 lg:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-3 divide-x divide-amber-950/20">
+        <div className="grid grid-cols-1 md:grid-cols-3 divide-x divide-amber-950/20 space-y-8 md:space-y-0">
           {processSteps.map((step, idx) => (
             <motion.div
               key={step.title}
-              className="bg-transparent rounded-xl p-8 flex flex-col items-start"
+              className="bg-transparent rounded-xl md:p-8 flex flex-col items-start"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
