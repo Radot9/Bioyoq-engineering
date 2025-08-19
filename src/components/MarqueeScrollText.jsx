@@ -5,7 +5,7 @@ export const MarqueeScrollText = ({ text }) => {
   const ref = React.useRef(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start end", "end start"] });
   // Move from right (800px) to left (-400px) faster as you scroll
-  const xRaw = useTransform(scrollYProgress, [0, 1], [800, -400]);
+  const xRaw = useTransform(scrollYProgress, [0, 1], [800, -700]);
   const x = useSpring(xRaw, { mass: 2, stiffness: 120, damping: 40 });
   // Fade in gently
   const opacityRaw = useTransform(scrollYProgress, [0, 0.2], [0, 1]);
