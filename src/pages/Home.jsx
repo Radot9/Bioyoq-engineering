@@ -65,7 +65,7 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section className="flex flex-col gap-2 lg:gap-8 mx-auto max-w-screen-2xl px-8 py-8 lg:py-32">
+      <section className="flex flex-col gap-2 lg:gap-8 mx-auto max-w-screen-2xl px-4 md:px-8 py-8 lg:py-32">
         {/* First text - left side */}
         <div className="text-left w-full md:w-3/5">
           <SlideUpParagraph>
@@ -102,7 +102,7 @@ export default function Home() {
       </section>
 
       {/* Process Section */}
-      <section className="mx-auto max-w-screen-2xl px-4 py-8 lg:py-16">
+      <section className="mx-auto max-w-screen-2xl px-4 md:px-8 py-8 lg:py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 divide-x divide-amber-950/20">
           {processSteps.map((step, idx) => (
             <motion.div
@@ -135,7 +135,7 @@ export default function Home() {
       </section>
 
       {/* Our Capabilities */}
-      <section className="mx-auto max-w-screen-2xl px-8 py-8 lg:py-16">
+      <section className="mx-auto max-w-screen-2xl px-4 md:px-8 py-8 lg:py-16">
         <h2 className="text-4xl font-bold mb-8 text-gray-900">Our Capabilities</h2>
           <SlideUpParagraph>
             <div className="max-w-[700px]">
@@ -179,7 +179,7 @@ export default function Home() {
       </section>
 
       {/* Our Members */}
-      <section className="mx-auto max-w-screen-2xl px-8 py-8 lg:py-16">
+      <section className="mx-auto max-w-screen-2xl px-4 md:px-8 py-8 lg:py-16">
         <div className="flex flex-col md:flex-row w-full mb-16">
           <h2 className="text-4xl font-bold mb-8 text-gray-900 flex-1">Our Members</h2>
           <SlideUpParagraph>
