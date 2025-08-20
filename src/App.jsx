@@ -1,10 +1,10 @@
-
 import Home from "./pages/Home";
 import AboutUs from "./pages/AboutUs";
 import Capabilities from "./pages/Capabilities";
 import Projects from "./pages/Projects";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -16,6 +16,7 @@ function App() {
         <Route path="/capabilities" element={<Capabilities />} />
         <Route path="/projects" element={<Projects />} />
       </Routes>
+      <Footer />
     </Router>
   );
 }

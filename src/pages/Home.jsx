@@ -138,7 +138,7 @@ export default function Home() {
       <section className="mx-auto max-w-screen-2xl px-4 md:px-8 py-8 lg:py-16">
         <h2 className="text-4xl font-bold mb-8 text-gray-900">Our Capabilities</h2>
           <SlideUpParagraph>
-            <div className="max-w-[700px]">
+            <div className="max-w-[700px] text-lg text-gray-700">
               We leverage cutting-edge technology and industry best practices to deliver exceptional results in every project. Our capabilities include advanced project management, sustainable construction practices, and a commitment to safety and quality.
             </div>
           </SlideUpParagraph>
