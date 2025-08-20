@@ -16,7 +16,7 @@ export default function Footer() {
         {/* Navigation Links */}
           <div className="flex flex-col items-center justify-center mb-8">
             <img src={BioyoqLogoWhite} alt="Bioyoq Logo" className="h-24 mb-6" />
-            <nav className="flex flex-wrap gap-8 text-lg font-light">
+            <nav className="flex flex-wrap gap-8 text-lg font-light justify-center">
               <a href="#people" className="hover:text-white/80">Our people</a>
               <a href="#expertise" className="hover:text-white/80">Expertise</a>
               <a href="#capabilities" className="hover:text-white/80">Capabilities</a>
@@ -38,13 +38,13 @@ export default function Footer() {
 
         {/* Company Info & Socials */}
         <div className="flex flex-col md:flex-row items-center justify-between text-sm text-white/80 mb-4">
-          <div className="flex flex-col md:flex-row gap-4 md:gap-8 items-center">
-            <span>
-              6, Ofili Close, Thomas Ajufo Estate, Alimosho, Lagos
-            </span>
-            <span>info@bioyoq.com</span>
-            <span>+234 800 000 0000</span>
-          </div>
+          <div className="flex flex-col gap-4 md:flex-row md:gap-8 items-center w-full">
+              <span className="w-full text-center md:text-left">
+                6, Ofili Close, Thomas Ajufo Estate, Alimosho, Lagos
+              </span>
+              <span className="w-full text-center md:text-left">info@bioyoq.com</span>
+              <span className="w-full text-center md:text-left">+234 800 000 0000</span>
+            </div>
           <div className="flex gap-6 mt-4 md:mt-0">
             <a href="#linkedin" className="hover:text-white">
               LinkedIn
