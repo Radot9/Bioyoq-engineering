@@ -6,7 +6,7 @@ import LogoCarousel from "../components/LogoCarousel.jsx";
 import { AnimatedAboutText } from "../components/AnimatedAboutText.jsx";
 import { AnimatedDivider } from "../components/AnimatedDivider.jsx";
 import { MarqueeScrollText } from "../components/MarqueeScrollText.jsx";
-
+import memberImage from "../assets/images/bioyoq-road-construction.jpg";
 import { processSteps } from "../data/processSteps";
 import { capabilities } from "../data/capabilities.js";
 import { motion } from "framer-motion";
@@ -181,14 +181,14 @@ export default function Home() {
       {/* Our Members */}
       <section className="mx-auto max-w-screen-2xl px-4 md:px-8 py-8 lg:py-16">
         <img
-          src={HeroBanner}
+          src={memberImage}
           alt="Team"
-          className="w-full h-64 lg:h-128 object-cover rounded-xl mb-8"
+          className="w-full h-64 lg:h-128 object-cover object-top rounded-xl mb-8 filter brightness-90 contrast-110 saturate-125"
         />
         <div className="flex flex-col md:flex-row w-full mb-16">
           <h2 className="text-4xl font-bold mb-8 text-gray-900 flex-1">Our Members</h2>
           <SlideUpParagraph>
-            <div className="md:w-2/5 ml-auto">
+            <div className="md:w-3/5 lg:w-2/5  ml-auto">
               Our staff are actively involved with a range of peak industry bodies, connecting with their peers, drawing on educational resources and accessing up-to-date information on industry developments.
             </div>
           </SlideUpParagraph>
