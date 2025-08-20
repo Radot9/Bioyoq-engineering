@@ -43,7 +43,7 @@ export default function Footer() {
                 6, Ofili Close, Thomas Ajufo Estate, Alimosho, Lagos
               </span>
               <span className="w-full text-center md:text-left">info@bioyoq.com</span>
-              <span className="w-full text-center md:text-left">+234 800 000 0000</span>
+              <span className="w-full text-center md:text-left">+234 705 639 5222</span>
             </div>
           <div className="flex gap-6 mt-4 md:mt-0">
             <a href="#linkedin" className="hover:text-white">
