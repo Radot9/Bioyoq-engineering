@@ -136,6 +136,11 @@ export default function Home() {
 
       {/* Our Capabilities */}
       <section className="mx-auto max-w-screen-2xl px-4 md:px-8 py-8 lg:py-16">
+         <img
+          src={memberImage}
+          alt="Team"
+          className="w-full h-64 lg:h-128 object-cover object-top rounded-xl mb-8 filter brightness-90 contrast-110 saturate-125"
+        />
         <h2 className="text-4xl font-bold mb-8 text-gray-900">Our Capabilities</h2>
           <SlideUpParagraph>
             <div className="max-w-[700px] text-lg text-gray-700">
@@ -180,11 +185,7 @@ export default function Home() {
 
       {/* Our Members */}
       <section className="mx-auto max-w-screen-2xl px-4 md:px-8 py-8 lg:py-16">
-        <img
-          src={memberImage}
-          alt="Team"
-          className="w-full h-64 lg:h-128 object-cover object-top rounded-xl mb-8 filter brightness-90 contrast-110 saturate-125"
-        />
+       
         <div className="flex flex-col md:flex-row w-full mb-16">
           <h2 className="text-4xl font-bold mb-8 text-gray-900 flex-1">Our Members</h2>
           <SlideUpParagraph>
