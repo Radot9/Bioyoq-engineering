@@ -42,7 +42,7 @@ export default function Home() {
           </h1>
 
           <div className="flex justify-between items-end gap-4 h-full">
-            <PrimaryButton text="Talk to us" className="self-end" />
+            <PrimaryButton text="Talk to us" className="self-end" to="/contact" />
 
             <div className="flex flex-col items-center">
               <svg

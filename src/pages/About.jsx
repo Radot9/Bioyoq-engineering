@@ -203,19 +203,8 @@ export default function About() {
           ))}
         </section>
 
-      {/* Industry Engagement Section */}
-      <section className="mx-auto max-w-screen-2xl px-4 md:px-8 py-8 lg:py-32">
-        <h2 className="text-4xl font-bold mb-8 text-primary">
-          Industry Engagement
-        </h2>
-        <SlideUpParagraph>
-          <div className="max-w-[700px] text-lg text-gray-700">
-            Our team actively participates in industry bodies, attends
-            conferences, and collaborates with peers to stay ahead of trends and
-            best practices.
-          </div>
-        </SlideUpParagraph>
-      </section>
+     
+   
 
       {/* Partners Section */}
       <section className="mx-auto max-w-screen-2xl px-4 md:px-8 py-8 lg:py-32">
@@ -223,23 +212,34 @@ export default function About() {
         <LogoCarousel />
       </section>
 
-      {/* Contact Us Section */}
-      <section className="mx-auto max-w-screen-2xl px-4 md:px-8 py-8 lg:py-32">
-        <h2 className="text-4xl font-bold mb-8 text-primary">Contact Us</h2>
-        <div className="bg-white rounded-xl p-8 shadow flex flex-col items-center">
-          <p className="text-lg text-gray-700 mb-4">
-            Ready to start your project or have questions? Reach out to our team
-            today.
-          </p>
-          <a
-            href="mailto:info@bioyoq.com"
-            className="text-primary text-xl font-bold underline mb-2"
-          >
-            info@bioyoq.com
-          </a>
-          <span className="text-gray-600">+234 800 000 0000</span>
-        </div>
-      </section>
+
+           {/* Industry Engagement Section - reference style */}
+        <section className="w-full bg-[#F7F6F2] py-16 px-4 md:px-8">
+          <div className="max-w-screen-2xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+            <div className="flex flex-col justify-center">
+              <h2 className="text-4xl md:text-5xl font-light text-gray-900 mb-8">Industry<br />Engagement/</h2>
+            </div>
+            <div className="flex flex-col justify-center text-right">
+              <p className="text-base text-gray-700 max-w-xl md:ml-auto">
+                We are actively involved with peak industry bodies—not just as members, but as contributors and educators. Our team regularly delivers training, presents at events and supports industry-wide capability uplift, helping to ensure legal and commercial best practice across the sector.
+              </p>
+            </div>
+          </div>
+       
+        </section>
+        {/* Contact Us Section - reference style */}
+        <section className="w-full bg-white py-16 px-4 md:px-8">
+          <div className="max-w-screen-2xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div className="flex flex-col justify-center">
+              <span className="text-lg text-gray-700 mb-4">Protect your projects</span>
+              <h2 className="text-[clamp(2.5rem,8vw,6rem)] font-light text-gray-900 mb-8">CONTACT US</h2>
+                <PrimaryButton text="Get in Touch" onClick={() => window.location.href = 'mailto:info@bioyoq.com'} />
+            </div>
+            <div className="flex flex-col items-end justify-center">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="#9D2B21" strokeWidth="2" className="mb-8"><line x1="24" y1="8" x2="24" y2="40"/><polyline points="24,24 40,40 8,40"/></svg>
+            </div>
+          </div>
+        </section>
     </>
   );
 }

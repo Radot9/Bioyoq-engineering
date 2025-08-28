@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import logo from '../assets/images/bioyoq-logo-white.svg';
+import PrimaryButton from './PrimaryButton.jsx';
 import HamburgerButton from './HamburgerButton';
 
 const navLinks = [
-    { name: 'Home', path: '/' },
-    { name: 'About Us', path: '/about' },
-    { name: 'Capabilities', path: '/capabilities' },
-    { name: 'Projects', path: '/projects' },
+  { name: 'Home', path: '/' },
+  { name: 'About Us', path: '/about' },
+  { name: 'Capabilities', path: '/capabilities' },
+  { name: 'Projects', path: '/projects' },
+  // ...existing links...
 ];
 
 const Navbar = () => {
@@ -28,7 +30,7 @@ const Navbar = () => {
         <img src={logo} alt="Bioyoq Logo" className="h-14 md:h-16" />
         {/* Desktop nav */}
         <nav className="hidden md:block">
-          <div className="backdrop-blur-md bg-white/30 rounded-xl px-4 py-2">
+          <div className="backdrop-blur-md bg-white/30 rounded-xl px-4 py-2 flex items-center">
             <ul className="flex space-x-4 h-full">
               {navLinks.map(link => (
                 <li key={link.path}>
@@ -43,6 +45,7 @@ const Navbar = () => {
                 </li>
               ))}
             </ul>
+            <PrimaryButton text="Contact Us" to="/contact" className="ml-6 w-[120px] h-[38px] text-base px-2 py-1" />
           </div>
         </nav>
         {/* Mobile hamburger */}
@@ -67,6 +70,9 @@ const Navbar = () => {
                   </NavLink>
                 </li>
               ))}
+              <li>
+                <PrimaryButton text="Contact Us" to="/contact" className="mt-2 w-[120px] h-[38px] text-base px-2 py-1" onClick={() => setMenuOpen(false)} />
+              </li>
             </ul>
           </div>
         </nav>
